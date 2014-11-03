@@ -24,3 +24,12 @@ LL.prototype.add = function(val) {
     }
     this.len++;
 }
+
+LL.prototype.item = function (pos) {
+    //@TODO: pre-conditions for empty list, bogus position
+    var cur = this.head;
+    for (var i = 0; i < pos; i++) {
+        cur = cur.next;
+    }
+    return cur;
+}
