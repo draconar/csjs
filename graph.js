@@ -3,6 +3,7 @@ function Graph(v) {
 	this.edges = 0;
 	this.marked = [];
 	this.adj = [];
+	this.edgeTo = [0];
 
 	for(var i = 0; i < this.vertices;  i++) {
 		this.adj[i] = [];
@@ -60,11 +61,31 @@ Graph.prototype.bfs = function(s) {
 		for( var w = 1; w< this.adj[v].length; w++){
 			if(!this.marked[this.adj[v][w]]){
 				this.marked[this.adj[v][w]] = true;
-				queue.push(this.adj[v][w]);
-				
+				this.edgeTo[this.adj[v][w]] = v;
+				queue.push(this.adj[v][w]);				
 			}
 		}
 	}
+}
+
+Graph.prototype.pathTo = function(v){
+	var w = v;
+	var source = 0;
+	var path = [];	
+	while(w != source){
+		if(this.hasPath(w)){
+			path.push(w);
+			w = this.edgeTo[w];
+		} else {
+			return null;
+		}
+	}
+	path.push(source);
+	return path;
+}
+
+Graph.prototype.hasPath = function(w){
+	return this.marked[w];
 }
 
 g = new Graph(5);
