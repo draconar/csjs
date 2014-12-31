@@ -13,7 +13,9 @@ data structures implemented
 	<li>Queue
 	<li>Tree
 	<li>Graph
-<ul>
+</ul>
+
+
 <h3>Algorithms</h3>
 
 <ul>
