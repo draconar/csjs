@@ -2,14 +2,14 @@
 
 function HashTable() {
 	this.table = new Array(137);
-	this.put = function(word) {
+	this.put = function(word, value) {
 		var pos = this.hashing(word);
-		this.table[pos] = word;
+		this.table[pos] = value;
 	};
 	this.get = function(word){		
 		var pos = this.hashing(word);
 		if (this.table[pos] != undefined) {
-			return pos;
+			return this.table[pos];
 		} else {
 			return undefined;
 		}		
