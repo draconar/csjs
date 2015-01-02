@@ -13,6 +13,7 @@ data structures implemented
 	<li>Queue
 	<li>Tree
 	<li>Graph
+	<li>HashTable
 </ul>
 
 
