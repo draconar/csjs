@@ -33,3 +33,27 @@ LL.prototype.item = function (pos) {
     }
     return cur;
 }
+
+LL.prototype.revert = function(){
+    var lastNode = this.head;
+    var curNode = this.head.next;    
+    var nextNode = curNode;
+
+    this.head.next = null;
+
+   while(nextNode.next) {           
+        nextNode = curNode.next;                     
+        curNode.next = lastNode;
+        lastNode = curNode;        
+   }
+    nextNode.next = curNode;
+    this.head = nextNode;
+}
+
+/*
+var l = new LL();
+l.add(1);
+l.add(2);
+l.add(3);
+l.revert();
+*/
