@@ -20,10 +20,11 @@ data structures implemented
 <h3>Algorithms</h3>
 
 <ul>
+	<li>Square root of an integer
 	<li>QuickSort
 	<li>MergeSort
 	<li>Tree Traversal (BFS, DFS)
-	<li>Graph Traversal (BFS, DFS, Path Finding w/ DFS)
+	<li>Graph Traversal (BFS, DFS, Path Finding w/ DFS)		
 </ul>
 
 
